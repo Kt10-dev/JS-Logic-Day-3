@@ -1,0 +1,84 @@
+// Question 1 .
+// Array Pair Sum
+// Ek array diya hai:
+// arr = [2, 7, 11, 15]
+// Target diya hai:
+// target = 9
+// 👉 Kaunsa pair sum karke 9 banata hai?
+
+
+let arr = [ 11, 15,2, 7]
+let target = 9
+
+function AddSum(arr,target){
+  for (var i = 0; i < arr.length; i++) {
+    let value = arr[i]
+    for(let j = i +1 ; j <arr.length; j++ ){
+      let valuu1= arr[j]
+      
+      if ([value + valuu1] == target) {
+        return [value ,valuu1]
+      }
+    }
+    
+  }
+}
+
+console.log(AddSum(arr,target))
+
+
+
+// Question 2 .
+// Three friends decide to split a bill.
+// Bill = ₹300
+// Har banda ₹100 deta hai
+// Waiter galti se ₹20 return kar deta hai
+// Waiter ne ₹5 apne liye rakh liya
+// Har bande ko ₹5 ₹5 ₹5 wapas mil gaya
+// Ab har bande ne effectively pay kiya:
+// 100 - 5 = 95
+// 3 log =
+// 95 × 3 = 285
+// Waiter ke paas 5
+// 285 + 5 = 290
+// ❓ Par bhai total toh ₹300 tha… missing ₹10 kahan gaya?
+// (Logic samajh ke answer do.)
+
+ 
+// Question 3. 
+// Ek string diya hai:
+
+// "apple banana apple mango banana apple"
+
+let strrig = "apple banana apple mango banana apple"
+let count ={}
+
+let words = strrig.split(" ")
+
+
+
+function StrnfFind(count,words){
+  
+  for(let word of words){
+    
+    if(count[word]){
+      count[word] +=1
+    }else{
+      count[word] = 1
+    }
+  }
+}
+
+StrnfFind(count,words)
+
+console.log(count)
+
+
+
+
+
+
+
+
+
+
