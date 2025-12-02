@@ -1,0 +1,94 @@
+// Question 1 — “Mirror Swap”
+
+// Ek array diya hai:
+
+// [10, 20, 30, 40, 50]
+
+
+// Tumhe first element ko last se,
+// second ko second-last se,
+// aise swap karke reverse banana hai without using .reverse().
+
+// Output → [50, 40, 30, 20, 10]
+
+
+// Ans
+let arr =[10, 20, 30, 40, 50]
+function reversearr(arr){
+    for(let i = 0;i <arr.length-1 -i; i++){
+      let j = arr.length-1 -i
+      
+      let temp = arr[i]
+      arr[i] =arr[j]
+      arr[j] = temp
+    }
+    return arr
+}
+
+console.log(reversearr(arr))
+
+
+
+
+
+// Question 2 — FUN RIDDLE LOGIC — “Boxes & Balls”
+
+// Riddle:
+// Tere paas 3 boxes hai:
+
+// Box A → label says “Red Balls”
+
+// Box B → label says “Blue Balls”
+
+// Box C → label says “Red + Blue Mixed”
+
+// BUT ek twist:
+
+// 👉 saare labels galat lage hue hain.
+
+// Ab tu sirf ek ball kisi ek box se nikal sakta hai
+// aur usse tumhe batana hai ki
+// kaun sa box kaun sa actual combination hold karta hai.
+
+
+
+// Question 3 — “Sum Until Single Digit”
+
+// Ek number diya hai:
+
+// 9875
+// Output = 2
+
+
+let num = 9875
+
+function sumdigit(num){
+  let sum = 0
+  while(num > 0){
+    sum += num % 10
+    num =Math.floor(num/10)
+  }
+  return sum 
+}
+
+
+function ReducedString(num){
+  while(num >10){
+    num = sumdigit(num)
+  }
+  return num
+}
+
+console.log(ReducedString(num))
+
+
+
+
+
+
+
+
+
+
+// Tumhe digits ka sum karte rehna hai
+// jab tak result single digit na ban jaaye.
