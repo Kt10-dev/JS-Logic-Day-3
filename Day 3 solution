@@ -1,0 +1,79 @@
+// Q.1 Missing Number  [1,2,4,5]
+    // Task = Hume MissingNumber Find Karna hai
+    
+  let arr = [1,2,4,5]
+  let n = 5
+  
+  function MssisngNumFnd(arr,n){
+    let xor1 = 0
+    let xor2 = 0
+    
+    for(let i = 1; i<=n;i++){
+      xor1 = xor1 ^ i
+    }
+    for(let i = 0;i <arr.length;i++){
+      xor2 = xor2 ^ arr[i]
+    }
+    return xor1 ^ xor2
+  }
+  
+  console.log(MssisngNumFnd(arr,n))
+    
+    
+    
+    
+    
+    
+    
+//  Q.2 Bullbs Puzzle 
+        // Ek room ke andr 3 bulb lage huye hai . Room ke bahar 3 switches
+        // hai  switch a,b,c  Tum room ke andr dekh nhi skte hai tumhe 
+        // batana hai .konsa switch bulb ko control karta hai or tum room
+        // me sirf ek baar jaa skte ho fir batana hai konsa Switch se 
+        // connection hai bulb kaa. 
+  
+//  Q.3 First Recurring Character 
+        // strng = "acbbad"
+        // task = pehla voh character retuen karna hai dubara repeat huyaho
+        
+        let strng = "acabbad"
+        let count = {}
+        function Frsercurr(strng,count){
+          for(let i = 0; i<strng.length;i++){
+            let chr=strng[i]
+            if (count[chr]) {
+              return chr
+              
+            }else{
+              count[chr]=1
+            }
+          }
+        }
+        
+        console.log(Frsercurr(strng,count))
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
