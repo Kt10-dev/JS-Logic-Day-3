@@ -1,0 +1,59 @@
+// Question 1
+// Unique Number Finder
+
+// Ek array diya hai jisme baaki saare numbers 2–2 baar repeat ho rahe hain,
+// sirf ek hi number aisa hai jo sirf 1 baar aaya.
+
+// 👉 Us unique number ko find karo.
+
+// Example:
+// [4, 1, 2, 1, 2] → Output: 4
+
+let arr =[4, 1, 2, 1, 2] 
+
+function UniqueFinder(arr){
+  let xor = 0
+  
+  for(let i = 0;i < arr.length; i++){
+  xor = xor ^ arr[i]
+  }
+  return xor;
+}
+
+let j =UniqueFinder(arr)
+console.log(j)
+
+
+// Question 2
+// Riddle kya keh raha hai (simple breakdown)
+// Tere paas 3 sikke hain:
+// Coin A
+// Coin B
+// Coin C
+// In 3 me se sirf ek coin nakli hai.
+// Nakli coin ka weight thoda kam hai (yaani lighter).
+// Tere paas ek balance scale hai jo bas ye batata hai:
+// Left side heavy
+// Right side heavy
+// Ya dono equal
+// ⚠️ BUT — teu balance scale ko sirf ek baar us kar sakta hai.
+// ⚡ What you have to find?
+// 👉 Ek hi weighing me kaise pata chale
+// A, B aur C me kaun sa coin nakli (lighter) hai?
+// Kya trick use karega?
+// Kaunsi coins ko left/right me rakh ke weight compare karega?
+
+
+
+
+
+
+
+// Question 3
+let x = 0;
+
+for (let i = 1; i <= 5; i++) {
+    x = x + (i % 2 === 0 ? i : -i);
+}
+
+console.log(x);
